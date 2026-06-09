@@ -1,0 +1,46 @@
+{
+    "name": "devdojo/database",
+    "description": "Browse and edit your application's database tables.",
+    "keywords": [
+        "devdojo",
+        "database",
+        "laravel",
+        "livewire"
+    ],
+    "homepage": "https://github.com/devdojo/database",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Tony Lea",
+            "email": "tony@devdojo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevDojo\\Database\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DevDojo\\Database\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DevDojo\\Database\\DatabaseServiceProvider"
+            ],
+            "aliases": {
+                "Database": "DevDojo\\Database\\DatabaseFacade"
+            }
+        }
+    }
+}
